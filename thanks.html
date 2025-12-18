@@ -1,113 +1,329 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="utf-8">
-    <title>Спасибо за заявку! — Водоканал64</title>
-    <meta name="description" content="Спасибо за вашу заявку! Мы свяжемся с вами в ближайшее время.">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="robots" content="noindex, follow"/>
-    <link rel="shortcut icon" href="https://saratovpoverka.ru/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="https://saratovpoverka.ru/css/style.min.css">
-    <link rel="stylesheet" href="https://saratovpoverka.ru/css/add.css">
-    
-    <!-- Яндекс.Метрика -->
-    <script type="text/javascript">
-       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-       m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+  <meta charset="utf-8">
+  <title>Спасибо за заявку! — Водоканал64</title>
+  <meta name="description" content="Спасибо за вашу заявку! Мы свяжемся с вами в ближайшее время.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="robots" content="noindex, follow"/>
+  <link rel="shortcut icon" href="https://saratovpoverka.ru/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="https://saratovpoverka.ru/fonts/ProximaNova-Regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://saratovpoverka.ru/css/style.min.css">
+  <link rel="stylesheet" href="https://saratovpoverka.ru/css/add.css">
+  <link rel="stylesheet" href="https://saratovpoverka.ru/css/logo-custom.css">
 
-       ym(88444804, "init", {
-            clickmap:true,
-            trackLinks:true,
-            accurateTrackBounce:true,
-            webvisor:true
-       });
-       
-       // Отправка цели
-       ym(88444804, 'reachGoal', 'order_submit');
-    </script>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(88444804, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+   
+   // Отправка цели
+   ym(88444804, 'reachGoal', 'order_submit');
+</script>
+<!-- /Yandex.Metrika counter -->
+
+<style>
+  .thanks-section {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 0;
+  }
+  
+  .thanks-card {
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+    border-radius: 20px;
+    padding: 60px 40px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 20px 60px rgba(40, 167, 69, 0.3);
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  .thanks-icon {
+    font-size: 100px;
+    margin-bottom: 30px;
+    animation: checkmark 0.6s ease-in-out;
+  }
+  
+  @keyframes checkmark {
+    0% {
+      transform: scale(0) rotate(0deg);
+      opacity: 0;
+    }
+    50% {
+      transform: scale(1.2) rotate(10deg);
+    }
+    100% {
+      transform: scale(1) rotate(0deg);
+      opacity: 1;
+    }
+  }
+  
+  .thanks-card h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: white;
+  }
+  
+  .thanks-card p {
+    font-size: 1.4rem;
+    margin-bottom: 40px;
+    opacity: 0.95;
+  }
+  
+  .thanks-info {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 30px;
+    backdrop-filter: blur(10px);
+  }
+  
+  .thanks-info-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin: 15px 0;
+    font-size: 1.2rem;
+  }
+  
+  .thanks-info-item strong {
+    font-weight: 600;
+  }
+  
+  .btn-home {
+    display: inline-block;
+    background: white;
+    color: #28a745;
+    padding: 18px 50px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.2rem;
+    transition: all 0.3s;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  .btn-home:hover {
+    background: #f8f9fa;
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    color: #28a745;
+    text-decoration: none;
+  }
+  
+  @media (max-width: 768px) {
+    .thanks-card {
+      padding: 40px 20px;
+    }
     
-    <style>
-        body {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            background: linear-gradient(135deg, #0056b3 0%, #007bff 100%);
-            margin: 0;
-            padding: 20px;
-        }
-        .thanks-container {
-            background: white;
-            border-radius: 20px;
-            padding: 60px 40px;
-            text-align: center;
-            max-width: 600px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-        }
-        .thanks-icon {
-            font-size: 80px;
-            margin-bottom: 30px;
-            animation: scaleIn 0.5s ease-out;
-        }
-        @keyframes scaleIn {
-            from { transform: scale(0); }
-            to { transform: scale(1); }
-        }
-        h1 {
-            color: #28a745;
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            font-weight: 700;
-        }
-        .thanks-message {
-            font-size: 1.3rem;
-            color: #495057;
-            margin-bottom: 30px;
-        }
-        .thanks-info {
-            background: #f8f9fa;
-            border-radius: 10px;
-            padding: 20px;
-            margin-bottom: 30px;
-        }
-        .thanks-info p {
-            margin: 10px 0;
-            color: #212529;
-            font-size: 1.1rem;
-        }
-        .btn-back {
-            display: inline-block;
-            background: #007bff;
-            color: white;
-            padding: 15px 40px;
-            border-radius: 10px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: all 0.3s;
-        }
-        .btn-back:hover {
-            background: #0056b3;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
-            text-decoration: none;
-            color: white;
-        }
-    </style>
+    .thanks-card h1 {
+      font-size: 2rem;
+    }
+    
+    .thanks-card p {
+      font-size: 1.1rem;
+    }
+    
+    .thanks-info-item {
+      font-size: 1rem;
+      flex-direction: column;
+      gap: 5px;
+    }
+  }
+</style>
 </head>
-<body>
-    <div class="thanks-container">
-        <div class="thanks-icon">✅</div>
-        <h1>Заказ записан!</h1>
-        <p class="thanks-message">Оператор свяжется с вами в течение 5 минут</p>
-        <div class="thanks-info">
-            <p><strong>📞 Телефон:</strong> <a href="tel:+79344772566">+7 (934) 477-25-66</a></p>
-            <p><strong>📧 Email:</strong> <a href="mailto:info@vodokanal64.ru">info@vodokanal64.ru</a></p>
-            <p><strong>🕒 Режим работы:</strong> Пн.-Вс.: 9:00 - 21:00</p>
+<body class="">
+  <div class="container">
+	<div class="row justify-content-center">
+	  <div class="col-xl-11">
+		<div class="py-2 border-bottom d-none d-xl-block">
+  <div class="row align-items-center">
+	<div class="col-auto mr-auto">
+	  <ul class="contacts row list-unstyled mb-0">
+		<li class="col-auto">
+		  <a class="contacts__item" href="mailto:info@vodokanal64.ru">
+			<span class="contacts__item-icon">
+			  <img src="https://saratovpoverka.ru/img/email.svg" alt="email">
+			</span>
+			info@vodokanal64.ru
+		  </a>
+		</li>
+		<li class="col-auto">
+		  <div class="contacts__item">
+			<span class="contacts__item-icon">
+			  <img src="https://saratovpoverka.ru/img/address.svg" alt="">
+			</span>
+			Саратов, ул. Московская, д. 45
+		  </div>
+		</li>
+		<li class="col-auto">
+		  <div class="contacts__item">
+			<span class="contacts__item-icon">
+			  <img src="https://saratovpoverka.ru/img/hours.svg" alt="email">
+			</span>
+			Пн.-Вс.: 9:00 - 21:00
+		  </div>
+		</li>
+	  </ul>
+	</div>
+  </div>
+</div>
+
+<nav class="navbar navbar-expand-xl navbar-light">
+  <a class="navbar-brand" href="saratov-poverka.html" style="text-decoration: none;">
+	<div style="display: flex; align-items: center; gap: 15px;">
+	  <!-- Счетчик в квадрате -->
+	  <div style="position: relative; width: 55px; height: 55px;">
+		<svg width="55" height="55" viewBox="0 0 60 60">
+		  <!-- Квадрат с закругленными углами -->
+		  <rect x="2" y="2" width="56" height="56" rx="8" fill="#0056b3" stroke="#003d82" stroke-width="2"/>
+		  <!-- Корпус счетчика -->
+		  <rect x="15" y="22" width="30" height="16" rx="2" fill="#fff"/>
+		  <!-- Окошко с цифрами -->
+		  <rect x="18" y="26" width="24" height="8" rx="1" fill="#f8f9fa"/>
+		  <!-- Цифры счетчика -->
+		  <text x="30" y="32" font-family="Arial, sans-serif" font-size="7" font-weight="bold" fill="#212529" text-anchor="middle" dominant-baseline="middle">00000</text>
+		  <!-- Стрелки входа-выхода воды -->
+		  <path d="M 12 30 L 15 30" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+		  <path d="M 45 30 L 48 30" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+		  <!-- Красная галочка качества (в стиле кнопок сайта) -->
+		  <circle cx="40" cy="35" r="3.5" fill="#dc3545"/>
+		  <path d="M 38.3 35 L 39.5 36.2 L 41.7 34" stroke="#fff" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+		</svg>
+	  </div>
+	  <!-- Текст -->
+	  <div style="display: flex; flex-direction: column; line-height: 1.2;">
+		<span style="font-size: 24px; font-weight: 700; color: #212529; letter-spacing: 0.5px;">Водоканал<span style="color: #dc3545;">64</span></span>
+		<span style="font-size: 12px; font-weight: 500; color: #6c757d; letter-spacing: 0.5px;">Поверка счетчиков воды</span>
+	  </div>
+	</div>
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	<span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+	<ul class="navbar-nav align-items-center flex-grow-1">
+	  <li class="nav-item">
+		<a class="nav-link" href="saratov-poverka.html#main">Главная</a>
+	  </li>
+	  <li class="nav-item">
+		<a class="nav-link" href="saratov-poverka.html#about">О компании</a>
+	  </li>
+	  <li class="nav-item">
+		<a class="nav-link" href="saratov-poverka.html#services">Наши услуги</a>
+	  </li>
+	  <li class="nav-item">
+		<a class="nav-link" href="saratov-poverka.html#contacts">Контакты</a>
+	  </li>
+
+	  <li class="text-center ml-xl-auto">
+		<a class="navbar-phone" href="tel:+79344772566">+7 (934) 477-25-66</a>
+	  </li>
+	</ul>
+  </div>
+</nav>
+
+	  </div>
+	</div>
+  </div>
+
+  <!-- Thanks Section -->
+  <section class="thanks-section">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-xl-10">
+          <div class="thanks-card">
+            <div class="thanks-icon">✅</div>
+            <h1>Заказ записан!</h1>
+            <p>Оператор свяжется с вами в течение 5 минут</p>
+            
+            <div class="thanks-info">
+              <div class="thanks-info-item">
+                <strong>📞 Телефон:</strong>
+                <a href="tel:+79344772566" style="color: white; text-decoration: none; font-weight: 600;">+7 (934) 477-25-66</a>
+              </div>
+              <div class="thanks-info-item">
+                <strong>📧 Email:</strong>
+                <a href="mailto:info@vodokanal64.ru" style="color: white; text-decoration: none;">info@vodokanal64.ru</a>
+              </div>
+              <div class="thanks-info-item">
+                <strong>🕒 Режим работы:</strong>
+                <span>Пн.-Вс.: 9:00 - 21:00</span>
+              </div>
+            </div>
+            
+            <a href="saratov-poverka.html" class="btn-home">Вернуться на главную</a>
+          </div>
         </div>
-        <a href="saratov-poverka.html" class="btn-back">Вернуться на главную</a>
+      </div>
     </div>
+  </section>
+
+  <footer class="footer pt-md-5 pt-4 pb-64p pb-xl-5" id="contacts">
+  <div class="container">
+	<div class="row justify-content-center">
+	  <div class="col-xl-11">
+		<div class="row justify-content-between">
+		  <div class="col-sm-auto">
+			<div class="font-weight-600 mb-sm-4 mb-2">Меню</div>
+<ul class="footer__menu list-unstyled mb-0"><li>
+<a href="saratov-poverka.html#about">О нас</a></li><li>
+<a href="saratov-poverka.html#services">Наши услуги</a></li><li>
+<a href="saratov-poverka.html#contacts">Контакты</a></li></ul>
+			</div>
+		  <div class="col-sm-auto mt-4 mt-md-0">
+			<div class="font-weight-600 mb-sm-4 mb-2">Контактные данные</div>
+			<div class="contacts">
+			  <a class="contacts__item" href="mailto:info@vodokanal64.ru">
+				<span class="contacts__item-icon">
+				  <img src="https://saratovpoverka.ru/img/email.svg" alt="Email">
+				</span>
+				info@vodokanal64.ru
+			  </a>
+			  <div class="contacts__item">
+				<span class="contacts__item-icon">
+				  <img src="https://saratovpoverka.ru/img/address.svg" alt="">
+				</span>
+				Саратов, ул. Московская, д. 45
+			  </div>
+			  <div class="contacts__item">
+				<span class="contacts__item-icon">
+				  <img src="https://saratovpoverka.ru/img/hours.svg" alt="Время работы">
+				</span>
+				Пн.-Вс.: 9:00 - 21:00
+			  </div>
+			</div>
+		  </div>
+		  <div class="col-sm-auto mt-4 mt-md-0">
+			<div class="font-weight-600 mb-2">Обратная связь</div>
+			<a href="tel:+79344772566" class="footer__phone">+7 (934) 477-25-66</a>
+		  </div>
+		</div>
+	  </div>
+	  
+	</div>
+
+	<div class="text-center border-top py-lg-4 py-3 mt-lg-30p mt-4">
+	  © 2018-2025 ООО "Водоканал64" г. Саратов Все права защищены.
+	</div>
+  </div>
+</footer>
+
+<script src="https://saratovpoverka.ru/js/scripts.min.js"></script>
 </body>
 </html>
-
