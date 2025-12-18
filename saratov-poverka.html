@@ -14,17 +14,16 @@
 
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
-   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=105914824', 'ym');
 
-   ym(88444804, "init", {
-        clickmap:true,
-        trackLinks:true,
-        accurateTrackBounce:true,
-        webvisor:true
-   });
+    ym(105914824, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
 </script>
+<noscript><div><img src="https://mc.yandex.ru/watch/105914824" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
 
 <link rel="stylesheet" href="https://saratovpoverka.ru/assets/components/ajaxform/css/default.css" type="text/css" />
@@ -763,6 +762,52 @@
 <script src="https://saratovpoverka.ru/assets/components/ajaxform/js/default.js"></script>
 <script src="config.js"></script>
 <script src="script.js"></script>
+
+<script>
+// Маска телефона для всех полей
+document.addEventListener('DOMContentLoaded', function() {
+  const phoneInputs = document.querySelectorAll('input[type="tel"], input[name="phone"]');
+  
+  phoneInputs.forEach(function(input) {
+    input.addEventListener('input', function(e) {
+      let value = e.target.value.replace(/\D/g, '');
+      
+      if (value.length > 0) {
+        if (value[0] === '8') {
+          value = '7' + value.substring(1);
+        }
+        if (value[0] !== '7') {
+          value = '7' + value;
+        }
+      }
+      
+      let formattedValue = '';
+      if (value.length > 0) {
+        formattedValue = '+7';
+        if (value.length > 1) {
+          formattedValue += ' (' + value.substring(1, 4);
+        }
+        if (value.length >= 5) {
+          formattedValue += ') ' + value.substring(4, 7);
+        }
+        if (value.length >= 8) {
+          formattedValue += '-' + value.substring(7, 9);
+        }
+        if (value.length >= 10) {
+          formattedValue += '-' + value.substring(9, 11);
+        }
+      }
+      
+      e.target.value = formattedValue;
+    });
+    
+    // При загрузке страницы, если есть значение
+    if (input.value && input.value.length > 0) {
+      input.dispatchEvent(new Event('input'));
+    }
+  });
+});
+</script>
 </body>
 </html>
 
